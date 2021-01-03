@@ -32,13 +32,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 ### Let's show the model we are creating !
-# prepare some coordinates
-x, y, z = np.indices((8, 8, 8))
-# draw cuboids in the top left and bottom right corners, and a link between them
-cube1 = (x < 3) & (y < 3) & (z < 3)
-# combine the objects into a single boolean array
-voxels = cube1
-# and plot everything
+
 fig = plt.figure(figsize=((20,20)))
 ax = fig.gca(projection='3d', ymargin=0.2)
 ax.voxels (mat,  edgecolor='k')
